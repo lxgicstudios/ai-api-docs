@@ -1,5 +1,10 @@
 # ai-api-docs
 
+[![npm version](https://img.shields.io/npm/v/ai-api-docs.svg)](https://www.npmjs.com/package/ai-api-docs)
+[![npm downloads](https://img.shields.io/npm/dm/ai-api-docs.svg)](https://www.npmjs.com/package/ai-api-docs)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 Generate API documentation from your route files. Supports markdown and OpenAPI output.
 
 ## Install
