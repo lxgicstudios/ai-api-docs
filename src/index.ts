@@ -2,7 +2,18 @@ import OpenAI from "openai";
 import { readFileSync, writeFileSync, readdirSync, statSync } from "fs";
 import { join, extname } from "path";
 
-const openai = new OpenAI();
+function getOpenAI(): OpenAI {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    console.error(
+      "Missing OPENAI_API_KEY environment variable.\n" +
+      "Get one at https://platform.openai.com/api-keys then:\n" +
+      "  export OPENAI_API_KEY=sk-..."
+    );
+    process.exit(1);
+  }
+  return new OpenAI({ apiKey });
+}
 
 export function collectRouteFiles(dir: string): string[] {
   const files: string[] = [];
@@ -19,6 +30,7 @@ export function collectRouteFiles(dir: string): string[] {
 }
 
 export async function generateApiDocs(files: string[], format: string): Promise<string> {
+  const openai = getOpenAI();
   const code = files.map(f => `// ${f}\n${readFileSync(f, "utf-8")}`).join("\n\n");
 
   const response = await openai.chat.completions.create({

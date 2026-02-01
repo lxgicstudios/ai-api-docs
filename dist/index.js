@@ -9,7 +9,16 @@ exports.writeDocs = writeDocs;
 const openai_1 = __importDefault(require("openai"));
 const fs_1 = require("fs");
 const path_1 = require("path");
-const openai = new openai_1.default();
+function getOpenAI() {
+    const apiKey = process.env.OPENAI_API_KEY;
+    if (!apiKey) {
+        console.error("Missing OPENAI_API_KEY environment variable.\n" +
+            "Get one at https://platform.openai.com/api-keys then:\n" +
+            "  export OPENAI_API_KEY=sk-...");
+        process.exit(1);
+    }
+    return new openai_1.default({ apiKey });
+}
 function collectRouteFiles(dir) {
     const files = [];
     const entries = (0, fs_1.readdirSync)(dir);
@@ -25,6 +34,7 @@ function collectRouteFiles(dir) {
     return files;
 }
 async function generateApiDocs(files, format) {
+    const openai = getOpenAI();
     const code = files.map(f => `// ${f}\n${(0, fs_1.readFileSync)(f, "utf-8")}`).join("\n\n");
     const response = await openai.chat.completions.create({
         model: "gpt-4o-mini",
