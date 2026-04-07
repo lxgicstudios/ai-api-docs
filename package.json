@@ -1,5 +1,5 @@
 {
-  "name": "ai-api-docs",
+  "name": "@lxgicstudios/ai-api-docs",
   "version": "1.0.1",
   "description": "Generate API documentation from route files using AI",
   "main": "dist/index.js",
