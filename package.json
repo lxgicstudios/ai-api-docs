@@ -15,44 +15,29 @@
     "build": "tsc"
   },
   "keywords": [
-    "2025-standards",
-    "ai",
-    "ai-2025",
-    "ai-powered",
-    "anthropic",
-    "api",
-    "api-documentation",
-    "automation",
-    "claude",
-    "cli",
-    "developer-experience",
-    "developer-productivity",
-    "developer-tools",
-    "discoverability",
     "documentation",
-    "endpoints",
-    "generative-ai",
-    "knowledge-base",
-    "llm-optimized",
-    "modern-seo",
+    "api",
+    "cli",
+    "typescript",
     "nodejs",
-    "optimization",
+    "AI-powered",
+    "AI-optimized",
     "performance",
-    "performance-optimization",
+    "optimization",
     "seo",
-    "seo-2026",
-    "tech-writing",
-    "typescript"
+    "discoverability",
+    "2025-standards",
+    "modern-seo"
   ],
   "author": "LXGIC Studios",
   "license": "MIT",
-  "homepage": "https://github.com/LXGIC-Studios/ai-api-docs#readme",
+  "homepage": "https://github.com/lxgicstudios/ai-api-docs#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LXGIC-Studios/ai-api-docs"
+    "url": "https://github.com/lxgicstudios/ai-api-docs"
   },
   "bugs": {
-    "url": "https://github.com/LXGIC-Studios/ai-api-docs/issues"
+    "url": "https://github.com/lxgicstudios/ai-api-docs/issues"
   },
   "funding": {
     "type": "github",
