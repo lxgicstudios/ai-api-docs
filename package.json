@@ -8,7 +8,7 @@
     "ai-api-docs": "dist/cli.js"
   },
   "bugs": {
-    "url": "https://github.com/lxgicstudios/npm-tools/issues"
+    "url": "https://github.com/LXGIC-Studios/npm-tools/issues"
   },
   "dependencies": {
     "commander": "^12.1.0",
@@ -32,13 +32,15 @@
     "type": "github",
     "url": "https://github.com/sponsors/LXGIC-Studios"
   },
-  "homepage": "https://github.com/lxgicstudios/npm-tools/tree/main/ai-api-docs",
+  "homepage": "https://github.com/LXGIC-Studios/npm-tools/tree/main/ai-api-docs",
   "keywords": [
     "api-documentation",
     "openapi",
     "swagger",
     "rest-api",
-    "docs-generator"
+    "docs-generator",
+    "site-architecture",
+    "url-structure"
   ],
   "license": "MIT",
   "main": "dist/index.js",
@@ -49,7 +51,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lxgicstudios/npm-tools.git",
+    "url": "git+https://github.com/LXGIC-Studios/npm-tools.git",
     "directory": "ai-api-docs"
   },
   "scripts": {
